@@ -1,7 +1,9 @@
 # oneofwolvesbilly.github.io
-Hi, this is Chih-hao Chen, also Billy Chen. I'm a senior software engineer, and I have  4 years of experience. 
 
-In my experience, I have worked more than 4 years and coded in Java, but I believe it's not necessary force in one language. I try to make some projects coding in other language like lua, katlin, and swift.
-And I will leave them on GtHub.
+I am a software engineer with 7 years of experience in full-stack Java development, mainly focused on the finance and tech industries. I am proficient in modern frameworks including Spring Boot, Spring MVC, Angular, Vue, and React. My career has involved multiple banking system integration and credit card service development projects, where I honed my skills in backend/frontend integration, cross-team collaboration, and agile methodology.
 
-If you have any questions please feel free to connect me.
+At Wistron ITS, I served as a system analyst leading an 8-person team to rebuild the corporate banking system for Cathay United Bank. I was responsible for system architecture design, technical planning, and project coordination. Later at ZT Digital, I contributed to blockchain and cryptocurrency trading platform development, working closely on wallet integration and transaction security.
+
+More recently at Huida InfoTech, I participated in credit card backend transformation and external system development for HSBC, and supported KGI Bank in testing credit card systems in partnership with Microsoft. I left the company in October 2024 due to short-term medical recovery and am now fully recovered and actively looking for new opportunities.
+
+I’m passionate about software development and continuously self-learning new technologies and architectures. I look forward to joining a team that values technical excellence, collaboration, and delivering high-quality digital services.

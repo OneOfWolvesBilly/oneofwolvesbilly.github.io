@@ -7,79 +7,63 @@
   <title>Chih-hao (Billy) Chen | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    body {
-      font-family: "Inter", "Noto Sans TC", sans-serif;
-      background: #fafafa;
-      color: #222;
-      margin: 0;
-      line-height: 1.6;
-    }
-    header {
-      background: #0d1117;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-      color: #aaa;
-    }
-    nav {
-      background: #161b22;
-      padding: 0.8rem;
-      text-align: center;
-    }
-    nav a {
-      color: #58a6ff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    .project-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s;
-    }
-    .project-card:hover {
-      transform: translateY(-3px);
-    }
-    .project-card h3 {
-      margin-top: 0;
-    }
-    footer {
-      background: #0d1117;
-      color: #aaa;
-      text-align: center;
-      padding: 1.5rem 0;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  :root{
+    --bg:#fafafa; --fg:#222; --ink2:#666; --panel:#fff; --inkMuted:#9aa0a6;
+    --brand:#58a6ff; --shell:#0d1117; --shell2:#161b22;
+  }
+  html{ box-sizing:border-box; }
+  *,*:before,*:after{ box-sizing:inherit; }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family: "Inter","Noto Sans TC",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    line-height:1.65;
+  }
+
+  header{ background:var(--shell); color:#fff; padding:24px 16px; text-align:center; }
+  header h1{ margin:0; font-weight:700; font-size: clamp(22px, 4vw, 34px); }
+  header p{ margin:8px 0 0; color:#c9d1d9; font-size: clamp(13px, 2.5vw, 16px); }
+
+  nav{ background:var(--shell2); display:flex; gap:12px; padding:10px 12px; overflow-x:auto; }
+  nav a{ color:var(--brand); text-decoration:none; white-space:nowrap; font-weight:600; font-size:14px; }
+  nav a:hover{ text-decoration:underline; }
+
+  main{ width:min(92%, 1120px); margin:26px auto; }
+  section{ margin:0 0 28px; }
+  h2{ font-size: clamp(18px, 3.6vw, 24px); margin:0 0 14px; display:flex; align-items:center; gap:8px; }
+  p{ margin:0 0 12px; color:var(--fg); }
+
+  .project-card{
+    background:var(--panel); border-radius:14px; padding:16px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition: transform .18s ease, box-shadow .18s ease;
+    margin:14px 0;
+  }
+  .project-card:hover{ transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,.12); }
+  .project-card h3{ margin:0 0 6px; font-size: clamp(16px, 3.4vw, 20px); }
+  .project-card p{ margin:6px 0; color:var(--ink2); }
+  .project-card a{ color:#1f6feb; text-decoration:none; }
+  .project-card a:hover{ text-decoration:underline; }
+
+  .contact a{ margin-right:10px; }
+
+  footer{
+    background:var(--shell); color:var(--inkMuted);
+    text-align:center; padding:18px 10px; font-size:13px;
+  }
+  footer a{ color:var(--brand); text-decoration:none; }
+  footer a:hover{ text-decoration:underline; }
+
+  @media (min-width: 768px){
+    main{ width:min(90%, 1000px); }
+    .project-card{ padding:20px; }
+  }
+  @media (min-width: 1024px){
+    main{ width:min(86%, 1040px); }
+    header{ padding:36px 16px; }
+    .project-card{ padding:22px; }
+  }
+</style>
+
 </head>
 <body>
   <header>

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Chih-hao (Billy) Chen | Senior Backend Engineer - Java / Spring Boot / Fintech / WoW AddOn Developer" />
-    <title>Chih-hao (Billy) Chen | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Projects — Chih-hao (Billy) Chen"/>
+    <title>Projects — Chih-hao (Billy) Chen</title>
+      <style>
       :root{
         --bg:#fafafa; --fg:#222; --ink2:#666; --panel:#fff; --inkMuted:#9aa0a6;
         --brand:#58a6ff; --shell:#0d1117; --shell2:#161b22;
@@ -66,60 +65,50 @@
   </head>
   <body>
     <header>
-      <h1>Chih-hao (Billy) Chen</h1>
-      <p>Senior Backend Engineer | Java / Spring Boot / Fintech / WoW AddOn Developer</p>
+      <h1>Projects</h1>
+      <p>Selected open-source projects and ongoing work.</p>
     </header>
-
     <nav>
       <a href="/">Home</a>
-      <a href="/projects/">Projects</a>
+      <a class="active" href="/projects/">Projects</a>
       <a href="/about/">About</a>
       <a href="https://www.linkedin.com/in/chih-hao-chen/" target="_blank">LinkedIn</a>
       <a href="https://github.com/OneOfWolvesBilly" target="_blank">GitHub</a>
     </nav>
-
     <main>
       <section>
-        <h2>👋 Welcome</h2>
-        <p>
-          I'm Billy, a backend engineer from Taipei with 8 years of experience in fintech and payments.
-          I specialize in <strong>Spring Boot</strong> microservices, <strong>PostgreSQL</strong> optimization, and <strong>Kubernetes</strong> orchestration.
-          I also develop open-source <strong>World of Warcraft AddOns</strong> and creative tools like <strong>Harmonia Audio</strong>.
-        </p>
-      </section>
-
-      <section>
-        <h2>🧩 Featured Projects</h2>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/OneOfWolvesBilly/MinimapButtonHub" target="_blank">MinimapButtonHub</a></h3>
-          <p>Stable WoW AddOn for managing and organizing minimap buttons.</p>
-          <p><strong>Tech:</strong> Lua / WoW API</p>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/OneOfWolvesBilly/GoldLedgerHub" target="_blank">GoldLedgerHub (WIP)</a></h3>
-          <p>WoW AddOn currently in development — tracks weekly currencies and Great Vault rewards.</p>
-          <p><strong>Tech:</strong> Lua / MVVM</p>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/OneOfWolvesBilly/HarmoniaAudio" target="_blank">Harmonia Audio (In Progress)</a></h3>
-          <p>macOS audio editor (SwiftUI + AVFoundation) under early development.</p>
-          <p><strong>Tech:</strong> Swift / AVFoundation</p>
+        <h2>Featured</h2>
+        <div class="grid">
+          <article class="card">
+            <h3><a href="https://github.com/OneOfWolvesBilly/MinimapButtonHub" target="_blank">MinimapButtonHub</a></h3>
+            <p>Stable WoW AddOn for managing and organizing minimap buttons.</p>
+            <p><strong>Tech:</strong> Lua / WoW API</p>
+          </article>
+          <article class="card">
+            <h3>
+              <a href="https://github.com/OneOfWolvesBilly/GoldLedgerHub" target="_blank">GoldLedgerHub</a>
+              <span class="badge">WIP</span>
+            </h3>
+            <p>WoW AddOn currently in development — tracks weekly currencies and Great Vault rewards.</p>
+            <p><strong>Tech:</strong> Lua / MVVM</p>
+          </article>
+          <article class="card">
+            <h3>
+              <a href="https://github.com/OneOfWolvesBilly/HarmoniaAudio" target="_blank">Harmonia Audio</a>
+              <span class="badge">In Progress</span>
+            </h3>
+            <p>macOS audio editor built with SwiftUI + AVFoundation.</p>
+            <p><strong>Tech:</strong> Swift / AVFoundation</p>
+          </article>
         </div>
       </section>
-
       <section>
-        <h2>🌍 Contact</h2>
-        <p>
-          📧 <a href="mailto:billychen2001@gmail.com">billychen2001@gmail.com</a><br />
-          🔗 <a href="https://www.linkedin.com/in/chih-hao-chen/" target="_blank">LinkedIn</a> |
-          💻 <a href="https://github.com/OneOfWolvesBilly" target="_blank">GitHub</a>
-        </p>
+        <h2>Notes</h2>
+        <div class="card">
+          <p>More projects on my <a href="https://github.com/OneOfWolvesBilly?tab=repositories" target="_blank">GitHub repositories</a>.</p>
+        </div>
       </section>
     </main>
-
     <footer>
       <p>© 2025 Chih-hao (Billy) Chen — <a href="https://oneofwolvesbilly.github.io">oneofwolvesbilly.github.io</a></p>
     </footer>

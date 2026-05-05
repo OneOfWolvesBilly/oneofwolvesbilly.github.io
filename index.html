@@ -3,125 +3,579 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Chih-hao (Billy) Chen | Senior Backend Engineer - Java / Spring Boot / Fintech / WoW AddOn Developer" />
-    <title>Chih-hao (Billy) Chen | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta
+      name="description"
+      content="Chih-hao Chen — Senior Backend Engineer focused on scalable backend systems, fintech platforms, production reliability, Java/Kotlin Spring Boot, transaction-heavy systems, and clean architecture."
+    />
+    <title>Chih-hao Chen | Senior Backend Engineer</title>
     <style>
-      :root{
-        --bg:#fafafa; --fg:#222; --ink2:#666; --panel:#fff; --inkMuted:#9aa0a6;
-        --brand:#58a6ff; --shell:#0d1117; --shell2:#161b22;
+      :root {
+        --bg: #f6f8fa;
+        --fg: #1f2328;
+        --muted: #57606a;
+        --muted-2: #6e7781;
+        --panel: #ffffff;
+        --border: #d0d7de;
+        --brand: #0969da;
+        --brand-light: #58a6ff;
+        --shell: #0d1117;
+        --shell-2: #161b22;
+        --accent: #ddf4ff;
+        --accent-border: #54aeff;
+        --ok: #1a7f37;
       }
-      html{ box-sizing:border-box; }
-      *,*:before,*:after{ box-sizing:inherit; }
-      body{
-        margin:0; background:var(--bg); color:var(--fg);
-        font-family: "Inter","Noto Sans TC",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-        line-height:1.65;
+
+      html {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
       }
 
-      header{ background:var(--shell); color:#fff; padding:24px 16px; text-align:center; }
-      header h1{ margin:0; font-weight:700; font-size: clamp(22px, 4vw, 34px); }
-      header p{ margin:8px 0 0; color:#c9d1d9; font-size: clamp(13px, 2.5vw, 16px); }
-
-      nav{ background:var(--shell2); display:flex; gap:12px; padding:10px 12px; overflow-x:auto; }
-      nav a{ color:var(--brand); text-decoration:none; white-space:nowrap; font-weight:600; font-size:14px; }
-      nav a:hover{ text-decoration:underline; }
-
-      main{ width:min(92%, 1120px); margin:26px auto; }
-      section{ margin:0 0 28px; }
-      h2{ font-size: clamp(18px, 3.6vw, 24px); margin:0 0 14px; display:flex; align-items:center; gap:8px; }
-      p{ margin:0 0 12px; color:var(--fg); }
-
-      .project-card{
-        background:var(--panel); border-radius:14px; padding:16px;
-        box-shadow:0 2px 8px rgba(0,0,0,.08);
-        transition: transform .18s ease, box-shadow .18s ease;
-        margin:14px 0;
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
       }
-      .project-card:hover{ transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,.12); }
-      .project-card h3{ margin:0 0 6px; font-size: clamp(16px, 3.4vw, 20px); }
-      .project-card p{ margin:6px 0; color:var(--ink2); }
-      .project-card a{ color:#1f6feb; text-decoration:none; }
-      .project-card a:hover{ text-decoration:underline; }
 
-      .contact a{ margin-right:10px; }
-
-      footer{
-        background:var(--shell); color:var(--inkMuted);
-        text-align:center; padding:18px 10px; font-size:13px;
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "Inter", "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.65;
       }
-      footer a{ color:var(--brand); text-decoration:none; }
-      footer a:hover{ text-decoration:underline; }
 
-      @media (min-width: 768px){
-        main{ width:min(90%, 1000px); }
-        .project-card{ padding:20px; }
+      a {
+        color: var(--brand);
+        text-decoration: none;
       }
-      @media (min-width: 1024px){
-        main{ width:min(86%, 1040px); }
-        header{ padding:36px 16px; }
-        .project-card{ padding:22px; }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #0d1117 0%, #172033 55%, #0d1117 100%);
+        color: #ffffff;
+        padding: 58px 18px 46px;
+      }
+
+      .container {
+        width: min(92%, 1060px);
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: #9ecbff;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 960px;
+        font-size: clamp(32px, 7vw, 58px);
+        font-weight: 850;
+        letter-spacing: -0.04em;
+      }
+
+      .subtitle {
+        margin: 18px 0 0;
+        max-width: 840px;
+        color: #c9d1d9;
+        font-size: clamp(16px, 2.7vw, 21px);
+      }
+
+      .hero-actions,
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 9px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 999px;
+        color: #ffffff;
+        background: rgba(88, 166, 255, 0.18);
+        font-weight: 760;
+      }
+
+      .button:hover,
+      .button:focus {
+        background: rgba(88, 166, 255, 0.28);
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 22px 0 0;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgba(88, 166, 255, 0.34);
+        border-radius: 999px;
+        padding: 5px 10px;
+        color: #dbeafe;
+        background: rgba(88, 166, 255, 0.14);
+        font-size: 13px;
+        font-weight: 760;
+      }
+
+      .nav-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(22, 27, 34, 0.96);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
+      nav {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        padding: 11px 0;
+      }
+
+      nav a {
+        color: var(--brand-light);
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 760;
+      }
+
+      main {
+        padding: 34px 0 46px;
+      }
+
+      section {
+        scroll-margin-top: 64px;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        margin: 0 0 15px;
+        font-size: clamp(22px, 4vw, 30px);
+        letter-spacing: -0.02em;
+      }
+
+      h3 {
+        margin: 0 0 8px;
+        font-size: 19px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      .lead {
+        max-width: 900px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        padding: 20px;
+        box-shadow: 0 8px 22px rgba(27, 31, 36, 0.06);
+      }
+
+      .card p {
+        color: var(--muted);
+      }
+
+      .metric {
+        margin: 0;
+        color: var(--fg);
+        font-size: 32px;
+        font-weight: 850;
+        letter-spacing: -0.03em;
+      }
+
+      .metric-label {
+        margin: 4px 0 0;
+        color: var(--muted);
+      }
+
+      .list {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+      }
+
+      .list li {
+        margin: 6px 0;
+      }
+
+      .project-card {
+        transition: transform 0.16s ease, box-shadow 0.16s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 26px rgba(27, 31, 36, 0.1);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 6px;
+        padding: 2px 7px;
+        border: 1px solid var(--accent-border);
+        border-radius: 999px;
+        background: var(--accent);
+        color: #0550ae;
+        font-size: 12px;
+        font-weight: 760;
+        vertical-align: middle;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 14px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 4px 9px;
+        color: var(--muted);
+        background: #ffffff;
+        font-size: 13px;
+        font-weight: 720;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 10px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: minmax(92px, 128px) 1fr;
+        gap: 12px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .timeline-item:last-child {
+        border-bottom: 0;
+      }
+
+      .timeline-time {
+        color: var(--muted-2);
+        font-weight: 760;
+      }
+
+      .timeline-title {
+        margin: 0;
+        color: var(--fg);
+        font-weight: 800;
+      }
+
+      .timeline-desc {
+        margin: 3px 0 0;
+        color: var(--muted);
+      }
+
+      .contact-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%);
+      }
+
+      .contact-actions .button {
+        border-color: var(--border);
+        color: var(--brand);
+        background: #ffffff;
+      }
+
+      .contact-actions .button:hover,
+      .contact-actions .button:focus {
+        background: #f6f8fa;
+      }
+
+      footer {
+        background: var(--shell);
+        color: #8b949e;
+        text-align: center;
+        padding: 20px 12px;
+        font-size: 13px;
+      }
+
+      footer a {
+        color: var(--brand-light);
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding-top: 44px;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 3px;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Chih-hao (Billy) Chen</h1>
-      <p>Senior Backend Engineer | Java / Spring Boot / Fintech / WoW AddOn Developer</p>
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Senior Backend Engineer</p>
+        <h1>Scalable backend systems, fintech platforms, and production reliability.</h1>
+        <p class="subtitle">
+          I build and stabilize transaction-heavy backend services with Java, Kotlin, Spring Boot, SQL/Redis, GitLab CI/CD, and Docker/Kubernetes deployment workflows.
+        </p>
+        <div class="hero-actions" aria-label="Primary links">
+          <a class="button" href="mailto:billychen2001@gmail.com">Email me</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/chih-hao-chen/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/OneOfWolvesBilly" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div class="tags" aria-label="Core skills">
+          <span class="tag">Java / Kotlin / Spring Boot</span>
+          <span class="tag">Financial transaction systems</span>
+          <span class="tag">API contracts & service boundaries</span>
+          <span class="tag">Performance optimization</span>
+          <span class="tag">Production release stabilization</span>
+        </div>
+      </div>
     </header>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="/projects/">Projects</a>
-      <a href="/about/">About</a>
-      <a href="https://www.linkedin.com/in/chih-hao-chen/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/OneOfWolvesBilly" target="_blank">GitHub</a>
-    </nav>
+    <div class="nav-wrap">
+      <nav class="container" aria-label="Page navigation">
+        <a href="#focus">Focus</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
 
-    <main>
-      <section>
-        <h2>👋 Welcome</h2>
-        <p>
-          I'm Billy, a backend engineer from Taipei with 8 years of experience in fintech and payments.
-          I specialize in <strong>Spring Boot</strong> microservices, <strong>PostgreSQL</strong> optimization, and <strong>Kubernetes</strong> orchestration.
-          I also develop open-source <strong>World of Warcraft AddOns</strong> and creative tools like <strong>Harmonia Audio</strong>.
+    <main class="container">
+      <section id="focus">
+        <h2>Engineering Focus</h2>
+        <p class="lead">
+          Backend and system-design-oriented engineer with 7+ years of experience in banking and fintech systems. My strongest work sits at the intersection of transaction-heavy services, production reliability, API design, data consistency, and performance bottleneck resolution.
         </p>
-      </section>
-
-      <section>
-        <h2>🧩 Featured Projects</h2>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/OneOfWolvesBilly/MinimapButtonHub" target="_blank">MinimapButtonHub</a></h3>
-          <p>Stable WoW AddOn for managing and organizing minimap buttons.</p>
-          <p><strong>Tech:</strong> Lua / WoW API</p>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/OneOfWolvesBilly/GoldLedgerHub" target="_blank">GoldLedgerHub (WIP)</a></h3>
-          <p>WoW AddOn currently in development — tracks weekly currencies and Great Vault rewards.</p>
-          <p><strong>Tech:</strong> Lua / MVVM</p>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/OneOfWolvesBilly/HarmoniaAudio" target="_blank">Harmonia Audio (In Progress)</a></h3>
-          <p>macOS audio editor (SwiftUI + AVFoundation) under early development.</p>
-          <p><strong>Tech:</strong> Swift / AVFoundation</p>
+        <div class="grid three" style="margin-top: 18px;">
+          <article class="card">
+            <h3>Backend systems</h3>
+            <p>Designing and delivering Spring Boot services, REST APIs, integration specifications, and backend workflows for enterprise financial systems.</p>
+          </article>
+          <article class="card">
+            <h3>Reliability and consistency</h3>
+            <p>Resolving transaction consistency issues, duplicate execution risks, service connectivity defects, and production-bound release blockers.</p>
+          </article>
+          <article class="card">
+            <h3>Product architecture practice</h3>
+            <p>Building HarmoniaPlayer and related open-source projects to practice modular architecture, clear boundaries, and maintainable product design.</p>
+          </article>
         </div>
       </section>
 
-      <section>
-        <h2>🌍 Contact</h2>
+      <section id="evidence">
+        <h2>Production Evidence</h2>
+        <div class="grid three" aria-label="Production engineering highlights">
+          <article class="card">
+            <p class="metric">40m → 3s</p>
+            <p class="metric-label">Reduced severe transaction-query latency by optimizing MongoDB indexes and backend query logic under heavy data loads.</p>
+          </article>
+          <article class="card">
+            <p class="metric">30+</p>
+            <p class="metric-label">Resolved critical SIT/UAT defects in a 4-person banking delivery team, improving release stability before go-live.</p>
+          </article>
+          <article class="card">
+            <p class="metric">70k–700k</p>
+            <p class="metric-label">Redesigned large-dataset handling with backend-driven pagination, sorting, and optimized payloads to remove UI blocking.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <div class="grid two">
+          <article class="card project-card">
+            <h3>HarmoniaPlayer <span class="badge">Current focus</span></h3>
+            <p>
+              A macOS/iOS music player being prepared for a v0.1 release. The project focuses on modular architecture, clear system boundaries, metadata handling, audio playback, and maintainable application design.
+            </p>
+            <div class="pill-row" aria-label="HarmoniaPlayer technologies">
+              <span class="pill">Swift</span>
+              <span class="pill">SwiftUI</span>
+              <span class="pill">AVFoundation</span>
+              <span class="pill">Product Engineering</span>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>HarmoniaSuite / architecture practice</h3>
+            <p>
+              Personal engineering work for applying layered architecture, domain isolation, platform abstraction, behavior contracts, and long-term maintainability in real application code.
+            </p>
+            <div class="pill-row" aria-label="HarmoniaSuite architecture topics">
+              <span class="pill">Clean Architecture</span>
+              <span class="pill">Module Boundaries</span>
+              <span class="pill">Behavior Contracts</span>
+              <span class="pill">SDD</span>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Open-source utility projects</h3>
+            <p>
+              Maintained user-facing tools with published releases, multilingual support, versioned changelogs, and practical UI behavior improvements.
+            </p>
+            <div class="pill-row" aria-label="Open-source project topics">
+              <span class="pill">Release Management</span>
+              <span class="pill">Localization</span>
+              <span class="pill">User-facing UI</span>
+              <span class="pill">Documentation</span>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3><a href="https://github.com/OneOfWolvesBilly/MinimapButtonHub" target="_blank" rel="noreferrer">MinimapButtonHub</a></h3>
+            <p>
+              A published World of Warcraft utility AddOn. It is positioned here as evidence of open-source maintenance, event-driven UI programming, localization, and release discipline rather than as the main career direction.
+            </p>
+            <div class="pill-row" aria-label="MinimapButtonHub technologies">
+              <span class="pill">Lua</span>
+              <span class="pill">WoW API</span>
+              <span class="pill">Localization</span>
+              <span class="pill">Open Source</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid two">
+          <article class="card">
+            <h3>Backend</h3>
+            <p>Java, Kotlin, Spring Boot, REST APIs, Microservices</p>
+          </article>
+          <article class="card">
+            <h3>Data and reliability</h3>
+            <p>Oracle, PostgreSQL, MS SQL Server, MongoDB, Redis, SQL tuning, performance optimization, production reliability</p>
+          </article>
+          <article class="card">
+            <h3>Delivery</h3>
+            <p>GitLab CI/CD, Docker, Kubernetes deployment workflows, integration testing, UAT, production log monitoring</p>
+          </article>
+          <article class="card">
+            <h3>Architecture practice</h3>
+            <p>API contracts, service boundaries, data consistency, Clean Architecture, Specification-Driven Development</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="timeline">
+        <h2>Career Timeline</h2>
+        <div class="card timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">2024–Present</div>
+            <div>
+              <p class="timeline-title">Independent Software Engineer</p>
+              <p class="timeline-desc">Preparing HarmoniaPlayer v0.1 and maintaining open-source utility projects.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">2023–2024</div>
+            <div>
+              <p class="timeline-title">Huita International Information — HSBC / KGI Bank</p>
+              <p class="timeline-desc">Credit-card lifecycle services, REST APIs, SIT/UAT stabilization, CI/CD deployment workflows.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">2021–2022</div>
+            <div>
+              <p class="timeline-title">Vertex Digital Technologies</p>
+              <p class="timeline-desc">USDT transaction platform, query performance optimization, Redis-backed reliability improvements, financial reporting fixes.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">2020–2021</div>
+            <div>
+              <p class="timeline-title">Wistron ITS — Cathay United Bank</p>
+              <p class="timeline-desc">Corporate banking system analysis, API contracts, backend pagination/sorting design, full-stack delivery coordination.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">2018–2020</div>
+            <div>
+              <p class="timeline-title">RawStone / ThinkPower / SYSTalk</p>
+              <p class="timeline-desc">Digital banking workflows, payment systems, loans, insurance, API and SOAP integrations.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">2016–2017</div>
+            <div>
+              <p class="timeline-title">Jentech Precision Industrial</p>
+              <p class="timeline-desc">MES-related modules, preventive maintenance systems, reporting, scheduling, and SAP ERP integration support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card contact-card">
+        <h2>Contact</h2>
         <p>
-          📧 <a href="mailto:billychen2001@gmail.com">billychen2001@gmail.com</a><br />
-          🔗 <a href="https://www.linkedin.com/in/chih-hao-chen/" target="_blank">LinkedIn</a> |
-          💻 <a href="https://github.com/OneOfWolvesBilly" target="_blank">GitHub</a>
+          I am open to backend, platform, and system-design-oriented roles where reliability, maintainability, and clear service boundaries matter.
         </p>
+        <div class="contact-actions" aria-label="Contact links">
+          <a class="button" href="mailto:billychen2001@gmail.com">Email</a>
+          <a class="button" href="https://www.linkedin.com/in/chih-hao-chen/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button" href="https://github.com/OneOfWolvesBilly" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2025 Chih-hao (Billy) Chen — <a href="https://oneofwolvesbilly.github.io">oneofwolvesbilly.github.io</a></p>
+      <p>© 2026 Chih-hao Chen — <a href="https://oneofwolvesbilly.github.io">oneofwolvesbilly.github.io</a></p>
     </footer>
   </body>
 </html>
